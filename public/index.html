@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Ecommerce Website with payment</title>
+    <!--link to CSS-->
+    <link rel="stylesheet" href="css/style.css">  
+    <!--Box icons--->
+    <link
+     href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+     rel="stylesheet"
+     />
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <!--Nav-->
+        <div class="nav container">
+            <!--Logo-->
+            <a href="#" class="logo">Ecommerce</a>
+            <!--Cart icon-->
+            <i class='bx bx-shopping-bag' id="cart-icon" data-quantity="0"></i>
+            <!--Cart-->
+            <div class="cart">
+                <h2 class="cart-title">Your Cart</h2>
+                <!--Content -->
+                <div class="cart-content"></div>
+                <!--Total -->
+                <div class="total">
+                    <div class="total-title">Total</div>
+                    <div class="total-price">$0</div><!--$ to RS*-*-/*-/*-/*--->
+                </div>
+                <!--Buy Button-->
+                <button type="button" class="btn-buy">Pay Now</button>
+                <!--close Cart-->
+                <i class='bx bx-x' id="close-cart"></i>
+            </div>
+        </div>
+    </header>
+    <!--Products-->
+    <section class="shop container">
+        <h2 class="section-title">Shop Products</h2>
+        <!--Shop Content-->
+        <div class="shop-content">
+            <!--Box 1 -->
+            <div class="product-box">
+                <!--Stripe need images that are on online on local server it will not show in stripe checkout page we have to upload online BLOGGER -->
+              <img
+               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjx9PFY-wduWT78rx_FMGJ44zwCAQ7sbn7jqcbHgc8DhA5VfmjM4e5GxIIJAEzEOmqRIR4fnh-D22fxN9mCn6Z1oQNHzvleTfzQ1CsLHr3SBnOoKScx1mI35TcU_-oN_Fh3f6szHydkXPpbaHEdSTClxN0kxUF43MrepBbe8YwjARsEK87YBQznCN_kBpwm/s320/product1.jpeg" 
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">ADICOLOR SEASONAL</h2>
+            <span class="price">$120</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+               <!--Box 2 -->
+               <div class="product-box">
+               <img
+                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg2SeJIWNkD6BJdFgwZc5nqm7PBSUEgiRXbtWLdxb6YA7I1xwZmq7dJoSr2Am6JV3yG0Gilf5Uc2Y4oGWBCVadfKg6-g7PLBoPPJYjq88SoHgEd3b7_31NjAZtiXpq6BXSXDcKqwU9Qgj9QzaH1Uve3YZXng-0HmLYSTMpIHXUzTbsc6oWCzrKCk3hQXLTM/s320/product2.jpeg"
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">ADIDAS BAG</h2>
+            <span class="price">$150</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+               <!--Box 3 -->
+               <div class="product-box">
+              <img
+               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjfmR5nrrim8a3DbcukiVOl83Vx3c_eVe9ghA7sfPyb9HsdHT0CaaCBIw4tvpOMIbLxWYf8Dv1S8iUXsE4c4ZFPqJUorpdi0j8Gp7XE5FbtKo0HH-7Ozn8Vp50dswzL4kBfW9OQW31hklNuWGQ6RiNBD3SdEC1uV_zw-9Mj6ObAL5-yes7CJFrtaOkQVwJR/s320/product3.jpeg" 
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">ADIDAS CAP</h2>
+            <span class="price">$20</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+               <!--Box 4 -->
+               <div class="product-box">
+              <img
+               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhVizIcgA2erSLXppOL5lnnnUd1Vy2qVZCRAfr11DfbTG7oTHZqiN0BpVtQf_MK-Ofn5ncL9xSg6EdXZTpaVMLMIdw9Tga-WQtwegqjCvPFDaMuHNo1IBt1H1TDBiucQGZRUL6pVsl_5LWXbFX8qmZCnmC0OITZMYWjFuV77vSJeYqU_GKhZBzK-ygxoMms/s320/product4.jpeg" 
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">MESSI GOAT TEE</h2>
+            <span class="price">$90</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+               <!--Box 5 -->
+               <div class="product-box">
+                
+              <img
+               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgDlnYOOV4j3sWQZiQUGwZc0RYwDbni_gaBqaxSjXGzcukzfnhVg0llybSwE76xdtMdic3Fn-JCZcYrMcRMq7NnnBRr9f0DDERN9XRzPIdcE5iOjnKxxdZWcP1IO83RFbIS5n6mwZOvgnPzrKoe3HUpMLB8_zzYuaJflupF_KPXT063cxgyeB_P676Fmpgf/s320/product5.jpeg" 
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">ADIDAS HOODIE</h2>
+            <span class="price">$60</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+               <!--Box 6 -->
+               <div class="product-box">
+              <img
+               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju3_xr-3UXznB6_WdIo6Hw6Ka3DlaCeGQHwM6i5hqoFxBlCqZOX2IpuUVCkPbGlMKzuYXU4WGlpPv30lLCw9XXnYuKWsd_HL4m6XxGautjUy6M8_2_CvA-HPK45EGDzrB-Skiqg0ysukX24ZEsOF1T-6E64QVo_4zs-Nack1H7J0wVlHEO6D2Rtf_12vXL/s320/product6.jpeg" 
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">ADIDAS EARBUDS</h2>
+            <span class="price">$100</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+               <!--Box 7 -->
+               <div class="product-box">
+               
+              <img
+               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEizLYyA68j3r3Kdd--jGGgXL1_mW0XFJFWksy1GzM93xK6R8fKFTJQgUiuygwQpCYUX2tuw8aVwKLkIXdhZv56YbHA4d-mGTavbbU71qwYo4sFLZ7Nxma8ICMH4D4BjiJo5SOYzHYIxuifVip5VKIBNgVLebCnX4cktRnecd9Z9jpCZl6vyV3mVUmAbZYHN/s320/product7.jpeg" 
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">METAL BOTTLE 1L</h2>
+            <span class="price">$30</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+               <!--Box 8 -->
+               <div class="product-box">
+              <img
+               src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjHwmMHqVTMlnjhzvmCPjLQ_tkLHYFD5llZm9G8NO0iNQQFYOwTT-BP4tz_oo-2PbdcxpjlMrr29CHDupLxpyAqSFUx8jWgTZO-vwVdFri3TdRNgaR6EGKfZUlEUy9T_pPp1X3jWF3KM5U6ZO_QD7yo4TOwhBiGkjgGbLEwFEyl0O0zw5wcbrVBb4208Bmv/s320/product8.jpeg" 
+               alt=""
+               class="product-img"
+            />
+            <h2 class="product-title">ULTRABOOST SHOES</h2>
+            <span class="price">$50</span>
+            <i class="bx bx-shopping-bag add-cart"></i>
+            </div>
+             <!--Box 9 -->
+             <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEju3UO1cSTf963VdRbvUc--7xZJnx7-ltlLRexLl-OyBwFvduP8kDXU01IIwUmcTgEx6OARjK3qdc2nWYfvFF9L-xDM6q5mxAdk4WBx58OenFZYi9eWwjPeHBe5vdWICjIdCOuwgJI_ZYkDi7bfdri4HYXbUxesUpMeVXMFvmme-B4sFN0KAT3aWNzVOAhD/s320/product9.jpg" 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">CAMPUS SHOES</h2>
+              <span class="price">$110</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+               <!--Box 10 -->
+               <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEi_Cjs5V1D6UM2Ua4sVcIBO_WAaRA-0Uw85IJdpIqkdCBN0n9tVwP73o4DkV-I5Qby-5FQ8qrBolJpfnea0vuhdqaLeCerRj8g15XSnizQpI1aGabL8tOIql3cJy-rWdgizEfv43X2HXkiQtiGXT9Sml0nCRjJkidD9RJjaFW11LLHY8MzhYmRT45h8QLq7/s320/product10.jpg" 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">POWER BANK</h2>
+              <span class="price">$50</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+               <!--Box 11 -->
+               <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj4eIWd_1gZxwFyehucvMKea-lNrS4_vCZ_IhR179K5CNBnL81-V05-fzxAyU426IrikG0ESWvlO7sKwi8rBMI3AUD1r3xjLrM60cB80SSJWis2DtBF2QWNoUkvgwC6SKSyN0Ga9ZOYxZJl5vySWo20RMS2smZNE-GRsCMYCzCTAdEQ0bgO1y7ITjEAirTC/s320/product11.jpg" 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">PENDRIVE 64GB</h2>
+              <span class="price">$80</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+               <!--Box 12 -->
+               <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiiLKVmkDV52hLMT7vVP7WiMIP0tdcZnIcI0zYxJP7BW9AhEDd2k-szKWAQ93NoU0ExPK4jM7nRu3q-JzXa3yVcXB0XFgLpXwIzDlhq9WhwroEZLnAizuu09pc4CubE2LrRa9Nb4OyUVdWUlqqIfsAxN834mkJQx4lOZa04Etkzn1TOpOQ9AQFdovpZy2cv/s320/product12.jpg" 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">MI MOUSE</h2>
+              <span class="price">$50</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+              <!--Box 13 -->
+              <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhAZTf53e6vw1pzfaLhXXSVNmu1OHd1W3t6GHPcEciujsmacfSaYBdcTxV3TTJ29IN9HEZNOlSgfNzuNWfvacwV-J-PTRWamA25dU-K-0v5Q6V8OlEzzcj8UuRlgcr2tgRlXs3cQIViBZb9JXb5XaPqfORKpjJwbZhhEPtBdbFDJ0vnzwLF9DahI6N02fTS/s1600/product13.jpg" 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">TOOLKITS</h2>
+              <span class="price">$40</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+              <!--Box 14 -->
+              <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrB7UlCet218_R05WCrEVVBjFe5D9OOMuR4F2SZSdXx9Y3rFm4NPj84loFdWEL3JQnWXRpX_4fWpThseGPKmpMS2_ZiequVySsRWYuD0RTbmpq-eauT4q1MOKC4TiOQeYx2vDxgi5fmEoIuQfuMJJpgcX17KhEJHuaQK_HHGeUmDN-KQByivp_f2M6l3iX/s320/product14.jpg" 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">ROOM FRESHENER</h2>
+              <span class="price">$20</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+               <!--Box 15 -->
+               <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjKR8ZbnNhAAaOUENZ3l7cOqmFw8b7AZx6qPw-gSMsQXD9L74Yomx0NpCmXLSA_ZYSkp1RoU2bWBCz8K7nCmDTW68pQq8S9oXW2yJ_fYeqyeuvlySb02JqRDFZQo74vIF7qae0g0J6GhpWwZLahORHNmwRGCSE67SuTqPS9R5A_5t0XbhFOwQ0YGuy3DsYC/s320/product15.jpg" 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">SAMSUNG UTRA S22</h2>
+              <span class="price">$2500</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+               <!--Box 16 -->
+               <div class="product-box">
+                <img
+                 src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEinm7Xy2dJb2RocoWz6es7l2eItZD06grbHSr80LRiCyCCjSA6SuaZNL2rFKL-yAjpM-9nliwckLBHNw5axvF9i-VUkOlOxtjaltq5qgFUp5swNRN4ZaIOKQjj0oaXEGB5-zrH_hO09-Bc_JRlHdc7PeMLDJnWUc4Fw9A4wfT-unZYulo9gz_5JkpNWWufK/s320/product16.jpg " 
+                 alt=""
+                 class="product-img"
+              />
+              <h2 class="product-title">BOAT EARBUDS</h2>
+              <span class="price">$250</span>
+              <i class="bx bx-shopping-bag add-cart"></i>
+              </div>
+        </div>
+    </section>
+    <!-- Link To JS-->
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
